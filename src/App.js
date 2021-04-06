@@ -26,12 +26,6 @@ function App() {
   };
 
   useEffect(() => {
-    temp().then((data) => {
-      setApis(formatApis(data));
-    });
-  }, []);
-
-  useEffect(() => {
     const query = new URLSearchParams(params).toString();
     console.log(query);
     temp(query).then((data) => {
